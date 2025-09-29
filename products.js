@@ -102,11 +102,13 @@ let giftOptions = {
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing products page...');
     initializeFilters();
     initializeQuickView();
     initializeGiftOptions();
     initializeAddToCart();
     loadCartCount();
+    console.log('Products page initialized successfully!');
 });
 
 // Filter functionality
@@ -194,10 +196,15 @@ function initializeQuickView() {
     const quickViewBtns = document.querySelectorAll('.quick-view-btn');
     const modal = document.getElementById('quickViewModal');
     const closeBtn = document.querySelector('.close');
+    
+    console.log('Found', quickViewBtns.length, 'Quick View buttons');
 
     quickViewBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const productId = this.dataset.product;
+            console.log('Quick View button clicked for product:', productId);
             showQuickView(productId);
         });
     });
@@ -215,10 +222,15 @@ function initializeQuickView() {
 }
 
 function showQuickView(productId) {
+    console.log('showQuickView called with productId:', productId);
     const product = productData[productId];
-    if (!product) return;
+    if (!product) {
+        console.error('Product not found:', productId);
+        return;
+    }
 
     currentProduct = productId;
+    console.log('Showing quick view for product:', product.name);
 
     // Update modal content
     document.getElementById('modalProductName').textContent = product.name;
@@ -388,16 +400,23 @@ function addGiftToCart() {
 function initializeAddToCart() {
     const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
     const modalAddToCartBtn = document.querySelector('.add-to-cart-modal');
+    
+    console.log('Found', addToCartBtns.length, 'Add to Cart buttons');
 
     addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const productId = this.dataset.product;
+            console.log('Add to Cart button clicked for product:', productId);
             addProductToCart(productId);
         });
     });
 
     if (modalAddToCartBtn) {
-        modalAddToCartBtn.addEventListener('click', function() {
+        modalAddToCartBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             if (currentProduct) {
                 addProductToCart(currentProduct);
                 closeModal();
