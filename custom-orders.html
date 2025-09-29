@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cakes - Sweet Dreams Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Sweet Dreams Bakery</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="custom-orders.html" class="nav-link active">Custom Cakes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search bakery items...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Custom Orders Header -->
+    <section class="custom-orders-header">
+        <div class="container">
+            <h1>Custom Cakes</h1>
+            <p>Bring your special celebration to life with our custom designed cakes</p>
+        </div>
+    </section>
+
+    <!-- Custom Orders Process -->
+    <section class="custom-process">
+        <div class="container">
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>1. Share Your Vision</h3>
+                    <p>Tell us about your celebration, cake ideas, and special requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>2. Design & Quote</h3>
+                    <p>We'll create a cake design mockup and provide you with a detailed quote.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>3. Handcrafted Creation</h3>
+                    <p>Our skilled bakers will create your custom cake with meticulous attention to detail.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>4. Delivery</h3>
+                    <p>Your custom cake will be carefully packaged and delivered fresh to your celebration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Form -->
+    <section class="custom-order-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Request Your Custom Cake</h2>
+                <form id="customOrderForm" class="custom-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-200">$100 - $200</option>
+                                <option value="200-500">$200 - $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000+">$1,000+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Desired Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select Timeline</option>
+                            <option value="1-2-weeks">1-2 weeks</option>
+                            <option value="2-4-weeks">2-4 weeks</option>
+                            <option value="1-2-months">1-2 months</option>
+                            <option value="2+months">2+ months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Cake Type</label>
+                        <select id="category" name="category">
+                            <option value="">Select Category</option>
+                        <option value="birthday">Birthday Cake</option>
+                        <option value="wedding">Wedding Cake</option>
+                        <option value="anniversary">Anniversary Cake</option>
+                        <option value="graduation">Graduation Cake</option>
+                        <option value="baby-shower">Baby Shower Cake</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="other">Other Celebration</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="size">Preferred Size</label>
+                        <select id="size" name="size">
+                            <option value="">Select Size</option>
+                        <option value="small">Small (6" round, serves 8-10)</option>
+                        <option value="medium">Medium (8" round, serves 12-16)</option>
+                        <option value="large">Large (10" round, serves 20-25)</option>
+                        <option value="xlarge">Extra Large (12" round, serves 30-40)</option>
+                        <option value="custom">Custom Size</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="colors">Color Preferences</label>
+                        <input type="text" id="colors" name="colors" placeholder="e.g., Pink and white, blue and gold, rainbow colors, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Project Description *</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Please describe your cake vision, celebration details, flavor preferences, and any special requirements..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reference">Reference Images</label>
+                        <input type="file" id="reference" name="reference" accept="image/*" multiple>
+                        <small>Upload any reference images, cake designs, or inspiration photos (optional)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-requirements">Special Requirements</label>
+                        <textarea id="special-requirements" name="special-requirements" rows="3" placeholder="Any dietary restrictions, allergens, special flavors, or delivery requirements..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for updates and special offers
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a> *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit Custom Cake Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Gallery -->
+    <section class="custom-gallery">
+        <div class="container">
+            <h2>Recent Custom Cakes</h2>
+            <p>See some of our recent custom cake creations</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Wedding Cake" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Wedding Cake</h4>
+                        <p>Elegant 3-tier wedding cake with fresh flowers</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Birthday Cake" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Birthday Cake</h4>
+                        <p>Colorful birthday cake with custom decorations</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Anniversary Cake" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Anniversary Cake</h4>
+                        <p>Romantic anniversary cake with gold accents</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80" alt="Baby Shower Cake" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Baby Shower Cake</h4>
+                        <p>Adorable baby shower cake with pastel colors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sweet Dreams Bakery</h3>
+                    <p>Creating delicious baked goods that bring joy to your day.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#products">Menu</a></li>
+                        <li><a href="custom-orders.html">Custom Cakes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@doughart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dough Art. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="custom-orders.js"></script>
+</body>
+</html>
